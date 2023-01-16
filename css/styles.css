@@ -343,7 +343,7 @@ header .logo-text-secondary {
 .hero {
     background-color: var(--head-text-color);
     text-align: center;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     padding-top: 112px;
     padding-bottom: 112px; 
     padding-left: 54px;
@@ -402,6 +402,8 @@ header .logo-text-secondary {
 @media screen and (min-width: 1200px) {
     .hero {  
         width: 1440px;
+        margin-left: auto;
+        margin-right: auto;
         padding-top: 188px;
         padding-bottom: 292px;
         padding-left: 473px;
@@ -409,6 +411,8 @@ header .logo-text-secondary {
     }
 
     .hero-title {
+        margin-left: auto;
+        margin-right: auto;
         margin-bottom: 48px;
     }
 }
@@ -517,10 +521,6 @@ header .logo-text-secondary {
     .doing-lists {
         display: flex;
         column-gap: 24px;
-    }
-    
-    .doing-item {
-        /* column-gap: 24px; */
     }
 }
 /* ==================== OUR-DOING ==================== */
