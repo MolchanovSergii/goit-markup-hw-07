@@ -496,6 +496,35 @@ header .logo-text-secondary {
 }
 /* ==================== ABOUT ==================== */
 
+/* ==================== OUR-DOING ==================== */
+@media screen and (min-width: 1200px) {
+    .our-doing {
+        display: block;
+        padding-bottom: 120px;
+        justify-content: space-between;
+    }
+    .doing {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.11;
+        letter-spacing: 0.02em;
+        text-transform: capitalize;
+        color: #2E2F42;
+        text-align: center;
+        margin-bottom: 72px;
+    }
+    
+    .doing-lists {
+        display: flex;
+        column-gap: 24px;
+    }
+    
+    .doing-item {
+        /* column-gap: 24px; */
+    }
+}
+/* ==================== OUR-DOING ==================== */
+
 /* ==================== TEAM ==================== */
 
 
@@ -680,6 +709,17 @@ header .logo-text-secondary {
         width: 104px;    
     }
 }
+@media screen and (min-width: 1200px) {
+    .customers {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    .customers-list {
+        flex-wrap: nowrap;
+    }
+
+}
 /* ==================== CUSTOMERS ==================== */
 
 /* ==================== MAIN ==================== */
@@ -825,7 +865,7 @@ footer .logo-text-secondary {
         align-items: baseline;
         flex-wrap: wrap;
         padding-left: 108px;
-        row-gap: 112px;
+        row-gap: 72px;
         column-gap: 24px;
     }
     
@@ -852,6 +892,16 @@ footer .logo-text-secondary {
         left: 0;
         transform: translate(0, 0);
     }
+}
+
+@media screen and (min-width: 1200px) {
+    .footer-wrapper {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        padding-left: 0;
+        justify-content: space-between;
+    }
+
 }
 /* ==================== FOOTER ==================== */
 
@@ -999,24 +1049,7 @@ footer .logo-text-secondary {
     height: 64px;
 }
 
-.doing {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.11;
-    letter-spacing: 0.02em;
-    text-transform: capitalize;
-    color: #2E2F42;
-    text-align: center;
-    margin-bottom: 72px;
-}
 
-.doing-lists {
-    display: flex;
-}
-
-.doing-item:not(:last-child) {
-    margin-right: 24px;
-}
  */
 /* ==================== /MAIN ==================== */
 
