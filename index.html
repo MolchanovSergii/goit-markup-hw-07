@@ -18,7 +18,7 @@
 <body>
 <!-- ==================== HEADER ==================== -->
     <header>    
-        <div class="container">
+        <div class="container header-menu-nav">
             <a class="logo link" href="./index.html"><span class="logo-text">WEB</span><span class="logo-text-secondary">STUDIO</span></a>
             <nav class="header-nav">
                 <ul class="header-lists list">
@@ -27,25 +27,81 @@
                     <li class="header-item"><a class="header-link link" href="#">Contacts</a></li>
                 </ul>
             </nav>
-
             <ul class="header-contacts list">
                 <li class="header-contact-list"><a class="header-mail link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
                 <li class="header-contact-list"><a class="header-phone link" href="tel:+11(000)1111111">+11 (000) 111-11-11</a></li>
             </ul>
+            
+            <button type="button" class="open-mobile-menu js-open-menu">
+                <svg class="open-mobile-menu-icon" width="32" height="22">
+                    <use href="./images/icon.svg#header-mobile-menu"></use>
+                </svg>
+            </button>
+
+            <div class="header-menu-mobile js-menu-container">
+                <div class="menu-mobile-container">
+                    <button class="close-menu-mobile-btn js-close-menu" type="button" width="40" height="40">
+                    <svg class="close-modal-window-icon">
+                        <use href="./images/icon.svg#icon-close-modal"></use>
+                    </svg>
+                    </button> 
+                    <ul class="menu-mobile-lists list">
+                        <li class="menu-mobile-item"><a class="menu-mobile-link link" href="./index.html">Studio</a></li>
+                        <li class="menu-mobile-item"><a class="menu-mobile-link link" href="./portfolio.html">Portfolio</a></li>
+                        <li class="menu-mobile-item"><a class="menu-mobile-link link" href="#">Contacts</a></li>
+                    </ul>
+                    <ul class="menu-mobile-contacts list">
+                        <li class="menu-mobile-contact-list"><a class="menu-mobile-phone link" href="tel:+11(000)1111111">+11 (000) 111-11-11</a></li>
+                        <li class="menu-mobile-contact-list"><a class="menu-mobile-mail link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+                    </ul>
+                    <ul class="list menu-mobile-social-list">
+                        <li class="social-list-item" >
+                        <a class="social-list-link" href="">
+                            <svg class="social-link-icons" >
+                                <use href="./images/icon.svg#instagram" ></use>
+                            </svg>
+                        </a>
+                        </li>
+                        <li class="social-list-item" >
+                        <a class="social-list-link" href="">
+                            <svg class="social-link-icons" >
+                                <use href="./images/icon.svg#twitter" ></use>
+                            </svg>
+                        </a>
+                        </li>
+                        <li class="social-list-item" >
+                        <a class="social-list-link" href="">
+                            <svg class="social-link-icons" >
+                                <use href="./images/icon.svg#facebook" ></use>
+                            </svg>
+                        </a>
+                        </li>
+                        <li class="social-list-item" >
+                        <a class="social-list-link" href="">
+                            <svg class="social-link-icons" >
+                                <use href="./images/icon.svg#linkedin" ></use>
+                            </svg>
+                        </a>
+                        </li>
+                        </ul> 
+                </div>
+            </div>
         </div>
         
     </header>
+
 <!-- ==================== / HEADER / ==================== -->
 <!-- ==================== MAIN ==================== -->
     <main>
-        <section class="hero">
+
+        <section class="container hero">
             <h1 class="hero-title">Effective Solutions for Your Business</h1>
             <button class="hero-btn" type="button" data-modal-open>Order Service</button>
         </section>
 
-        <section class="about" >
+        <section class="container about" >
             <h2 class="visually-hidden">About our Company</h2>   
-            <div class="container">
+            <!-- <div class="container"> -->
                     <ul class="about-lists list">
                         <li class="about-item">
                             <div class="about-wrapper">
@@ -85,11 +141,11 @@
                             <p class="about-text">Design practice focused on digital experiences. We bring forth a deep passion for problem-solving.</p>
                         </li>
                     </ul>
-            </div>
+            <!-- </div> -->
         </section>
 
         <section>
-            <div class="container">
+            <div class="container our-doing">
                 <h2 class="doing">What are we doing</h2>
                     <ul class="doing-lists list">
                     <li class="doing-item"><img width="360" height="300" src="./images/desktop.jpg" alt="desktop"></li>
@@ -100,11 +156,11 @@
         </section>
         
         <section class="team-section">
-            <div class="container">
+            <div class="container">          
                 <h2 class="team">Our Team</h2>
                 <ul class="team-lists list">
                     <li class="team-item">
-                        <img src="./images/mark.jpg" alt="Mark" width="264" height="260">
+                        <img src="./images/mark.jpg" alt="Mark" width="264px" height="260px">
                         <h3 class="team-title">Mark Guerrero</h3>
                         <p class="team-prof">Product Designer</p>
                         <ul class="list social-list">
@@ -244,12 +300,12 @@
                         </ul>
                     </li>
                 </ul>
-            </div>
+            </div>    
         </section>
   
         <section>
-            <div class="container">
-                <h2 class="customers">Customers</h2>
+            <div class="container customers">
+                <h2 class="customers-title">Customers</h2>
                 <ul class="list customers-list">
                     <li class="customers-item">
                         <a class="customers-link" href="">
@@ -407,8 +463,8 @@
         </form>
     </div>
 </div>
-<!-- ==================== / MODAL WINDOW / ==================== -->    
-
+<!-- ==================== / MODAL WINDOW / ==================== --> 
+<script src="./js/mobile-menu.js"></script>
 <script src="./js/modal.js"></script>
 </body>
 </html>
