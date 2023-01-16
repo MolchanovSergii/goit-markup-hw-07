@@ -343,7 +343,7 @@ header .logo-text-secondary {
 .hero {
     background-color: var(--head-text-color);
     text-align: center;
-    /* margin: 0 auto; */
+    margin: 0 auto;
     padding-top: 112px;
     padding-bottom: 112px; 
     padding-left: 54px;
