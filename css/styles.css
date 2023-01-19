@@ -66,6 +66,7 @@ button {
   }
 
 .container {
+    width: 428px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 16px;
@@ -73,15 +74,16 @@ button {
 }
 
 /* ==================== HEADER ==================== */
-
+.header-wrapper {
+    min-width: 428px;
+    border-bottom: 1px solid #E7E9FC;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
 
 .header-menu-nav {
     display: flex;
     align-items: center;
     justify-content: space-between;  
-    border-bottom: 1px solid #E7E9FC;
-    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
-
 }
 
 .open-mobile-menu {
@@ -110,18 +112,12 @@ header .logo-text-secondary {
     color: var(--head-text-color);
 }
 
-@media screen and (max-width: 767.98px) {
-    .container {
-      width: 428px;
-    }
-
-    .header-lists,
-    .header-contacts,
-    .about-icon,
-    .our-doing {
-        display: none;
-    }
-  }
+.header-lists,
+.header-contacts,
+.about-icon,
+.our-doing {
+    display: none;
+}
 
 @media screen and (min-width: 768px) {
     .container {
@@ -341,27 +337,69 @@ header .logo-text-secondary {
 /* ==================== HERO ==================== */
 
 .hero {
+    min-width: 428px;
     background-color: var(--head-text-color);
     text-align: center;
-    margin: 0 auto;
     padding-top: 112px;
     padding-bottom: 112px; 
-    padding-left: 54px;
-    padding-right: 54px;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-        url(../images/hero-office.jpg);
+        url(../images/hero/hero-bg-mobile.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center center;   
+    background-position: center center; 
+}
+
+@media screen and (min-device-pixel-ratio: 2), 
+    screen and (min-resolution: 192dpi), 
+    screen and (min-resolution: 2dppx) {
+        .hero {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/hero/hero-bg-mobile@2x.jpg)
+        }
+    }
+
+@media screen and (min-width: 768px) {
+    .hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url(../images/hero/hero-bg-tablet.jpg);
+    }
+    
+}
+    
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px), 
+    screen and (min-resolution: 192dpi) and (min-width: 768px), 
+    screen and (min-resolution: 2dppx) and (min-width: 768px) {
+        .hero {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/hero/hero-bg-tablet@2x.jpg);
+        }
+    }
+
+@media screen and (min-width: 1200px) {
+    .hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url(../images/hero/hero-bg-desktop.jpg);
+    }    
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px), 
+    screen and (min-resolution: 192dpi) and (min-width: 1200px), 
+    screen and (min-resolution: 2dppx) and (min-width: 1200px){
+        .hero {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/hero/hero-bg-desktop@2x.jpg);
+        }    
 }
 
 .hero-title {
+    margin: 0 auto;
     font-weight: 700;
     font-size: 36px;
     line-height: 1.11;
     letter-spacing: 0.02em;
     color: #FFFFFF;
     margin-bottom: 72px;
+    width: 319px;
 }
 
 .hero-btn {
@@ -387,32 +425,27 @@ header .logo-text-secondary {
 @media screen and (min-width: 768px) {
     .hero {
         padding-bottom: 108px;
-        padding-left: 137px;
-        padding-right: 137px;
-        width: 768px;
+        background-position: unset;  
     }
     
     .hero-title {
         font-size: 55px;
         line-height: 1.07;
-        margin-bottom: 40px;        
+        margin-bottom: 40px; 
+        width: 494px;       
     }
 }
 
 @media screen and (min-width: 1200px) {
-    .hero {  
-        width: 1440px;
+    .hero { 
+        max-width: 1440px; 
         margin-left: auto;
         margin-right: auto;
         padding-top: 188px;
-        padding-bottom: 292px;
-        padding-left: 473px;
-        padding-right: 473px;
+        padding-bottom: 188px;
     }
 
     .hero-title {
-        margin-left: auto;
-        margin-right: auto;
         margin-bottom: 48px;
     }
 }
@@ -497,6 +530,10 @@ header .logo-text-secondary {
     .about-lists {
         flex-wrap: nowrap;
     }
+
+    .about-wrapper {
+        padding-bottom: 8px;
+    }
 }
 /* ==================== ABOUT ==================== */
 
@@ -526,9 +563,12 @@ header .logo-text-secondary {
 /* ==================== OUR-DOING ==================== */
 
 /* ==================== TEAM ==================== */
-
+.team-section-wrapper {
+    background-color: #F4F4FD; 
+}
 
 .team-section {
+    min-width: 428px;
     background-color: #F4F4FD; 
     padding-left: 82px;
     padding-right: 82px;
@@ -537,6 +577,7 @@ header .logo-text-secondary {
 }
 
 .team {
+    text-align: center;
     font-weight: 700;
     font-size: 36px;
     line-height: 1.11;
@@ -550,6 +591,7 @@ header .logo-text-secondary {
 .team-lists {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     row-gap: 72px;
 }
 
@@ -639,7 +681,6 @@ header .logo-text-secondary {
 
     .team-lists {
         flex-wrap: nowrap;
-        justify-content: center;
     }
 
 }
@@ -726,6 +767,7 @@ header .logo-text-secondary {
 
 /* ==================== FOOTER ==================== */
 footer {
+    min-width: 428px;
     background-color: #2E2F42;
 }
 
@@ -931,7 +973,7 @@ footer .logo-text-secondary {
 
     transition: color var(--transition), 
                 background-color var(--transition), 
-                border-color var(--transition),
+                border-color var(--transition);
 }
 
 .portfolio-btn:hover,
@@ -960,9 +1002,9 @@ footer .logo-text-secondary {
 }
 
 .link-item {
-    margin-bottom: 48px;
     background: #FFFFFF;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+    margin-bottom: 48px;
 
     transition: box-shadow var(--transition);
 }
@@ -974,7 +1016,6 @@ footer .logo-text-secondary {
 
 .portfolio-img-wrapper > img {
     width: 396px;
-
 }
 
 .cards-wrapper {
@@ -986,16 +1027,11 @@ footer .logo-text-secondary {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
-@media screen and (max-width: 767.98px) {
     .portfolio-projects-overlay {
         display: none;
     }
-  }
-@media screen and (min-width: 768px) {
-    .portfolio-projects-overlay{
-        display: none;
-    }
 
+@media screen and (min-width: 768px) {
     .portfolio-list {
         justify-content: center;
         flex-wrap: nowrap;
@@ -1011,6 +1047,14 @@ footer .logo-text-secondary {
         column-gap: 24px;
     }
 
+    .portfolio-projects {
+        margin-bottom: 72px;
+    }
+
+    .link-item {
+        margin-bottom: 0;
+    }
+
     .portfolio-img-wrapper > img {
         width: 356px;
     }
@@ -1024,102 +1068,61 @@ footer .logo-text-secondary {
     }
 }
 
-/* PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO*/
+@media screen and (min-width: 1200px) {
 
+    .portfolio-list {
+        justify-content: center;
+        margin-top: 96px;
+        margin-bottom: 72px;
+    }
 
+    .portfolio-projects {
+        row-gap: 48px;
+        column-gap: 23px;
+        margin-bottom: 120px;
+    }
 
-/* ==================== MAIN ==================== */
-/*
+    .portfolio-img-wrapper > img {
+        width: 100%;
+    }
 
-.about-item:last-child {
-    margin-right: 0;
-}
+    .portfolio-img-wrapper {
+        position: relative;
+        overflow: hidden;
+    }
 
-.about-wrapper {
-    display: flex;
-    background: #F4F4FD;
-    border-radius: 4px;
-    justify-content: center;
-    align-items: center;
-    height: 112px;
-}
-
-.about-icon {
-    width: 64px;
-    height: 64px;
-}
-
-
- */
-/* ==================== /MAIN ==================== */
-
-
-/* PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO*/
-
-
-/* ==================== MAIN ==================== */
-
-/* 
-
-
-
-
-.cards-wrapper {
-    border-bottom: 0.5px solid #F4F4FD;
-    border-left: 0.5px solid #F4F4FD;
-    border-right: 0.5px solid #F4F4FD;
-    padding-top: 32px;
-    padding-bottom: 32px;
-}
-
-.link-item:nth-child(3n) {
-    margin-right: 0;
-}
-
-.link-item:nth-last-child(-n+3) {
-    margin-bottom: 0;
-}
-
-
-
-.portfolio-item:last-child {
-    margin-right: 0;
-}
-
-
-
-
-.portfolio-projects-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    padding-top: 40px;
-    padding-left: 32px;
-    padding-right: 32px;
-    overflow: auto;
+    .portfolio-projects-overlay {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        padding-top: 40px;
+        padding-left: 32px;
+        padding-right: 32px;
+        overflow: auto;
+        
+        font-family: var(--primary-font);
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: #F4F4FD;
+        background: var(--primary-brand);
     
-    font-family: var(--primary-font);
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #F4F4FD;
-    background: var(--primary-brand);
+        transform: translate(0, 100%);
+    
+        transition: transform var(--transition);
+    }
+    
+    .link-portfolio-projects:hover .portfolio-projects-overlay,
+    .link-portfolio-projects:focus .portfolio-projects-overlay {
+        
+        transform: translate(0, 0);
+        
+    } 
 
-    transform: translate(0, 100%);
-
-    transition: transform var(--transition);
 }
 
-.link-portfolio-projects:hover .portfolio-projects-overlay,
-.link-portfolio-projects:focus .portfolio-projects-overlay {
-    
-    transform: translate(0, 0);
-    
-} 
-
-*/
-/* ==================== / MAIN ==================== */
 
 /* PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO*/
 
