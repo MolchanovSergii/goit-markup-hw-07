@@ -7,7 +7,6 @@
     --pressed-color: #404BBF;
     --primary-brand: #4D5AE5;
     --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
 }
 
 body {
@@ -121,10 +120,12 @@ header .logo-text-secondary {
 }
 
 @media screen and (min-width: 768px) {
+    
     .container {
         width: 768px;
       }
-    .open-mobile-menu,
+    
+      .open-mobile-menu,
     .header-menu-mobile,
     .our-doing {
         display: none;
@@ -166,9 +167,7 @@ header .logo-text-secondary {
         content: '';
         position: absolute;
         bottom: 0;
-        left: 0;
-
-    
+        left: 0; 
         width: 100%;
         height: 4px;
         border-radius: 2px;
@@ -192,6 +191,7 @@ header .logo-text-secondary {
     }
 
     @media screen and (min-width: 1200px) {
+        
         .container {
             width: 1158px;
           }
@@ -251,7 +251,6 @@ header .logo-text-secondary {
     position: relative;
     padding-left: 40px;
     padding-top: 80px;
-
     width: 100%;
     height: 100%;
     display: flex;
@@ -263,7 +262,6 @@ header .logo-text-secondary {
     position: fixed;
     top: 40px;
     right: 40px;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -505,10 +503,6 @@ header .logo-text-secondary {
         padding-top: 120px;
         padding-bottom: 120px;
     }
-
-    /* .about-item {
-        flex-basis: calc((100% - 24px * 3) / 4);
-    } */
 
     .about-icon {
         display: block;
@@ -890,7 +884,6 @@ footer .logo-text-secondary {
     padding-right: 64px;
     padding-top: 8px;
     padding-bottom: 8px;
-    
 
     transition: background-color var(--transition);
 }
@@ -899,7 +892,6 @@ footer .logo-text-secondary {
     position: absolute;
     top: 10px;
     right: 24px;
-    
     width: 24px;
     height: 20px;  
 }
@@ -928,7 +920,6 @@ footer .logo-text-secondary {
     .footer-social {
         margin-bottom: 0;
     }
-
 
     .footer-email {
         width: 264px;
@@ -1037,9 +1028,9 @@ footer .logo-text-secondary {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
-    .portfolio-projects-overlay {
-        display: none;
-    }
+.portfolio-projects-overlay {
+    display: none;
+}
 
 @media screen and (min-width: 768px) {
     .portfolio-list {
@@ -1133,7 +1124,6 @@ footer .logo-text-secondary {
 
 }
 
-
 /* PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO*/
 
 /* ==================== MODAL WINDOW ==================== */
@@ -1143,7 +1133,6 @@ footer .logo-text-secondary {
     z-index: 100;
     top: 0;
     left: 0;
-
     width: 100%;
     height: 100%;
     background-color: rgba(46, 47, 66, 0.4);
@@ -1200,7 +1189,6 @@ footer .logo-text-secondary {
 
 .registration-form-field {
     position: relative;
-
     display: block;
     margin-bottom: 8px;
     height: 58px;  
@@ -1230,7 +1218,6 @@ footer .logo-text-secondary {
     position: absolute;
     bottom: 0;
     left: 0;
-
     display: block;
     width: 100%;
     height: 40px;
